@@ -1,12 +1,11 @@
 import "./App.css";
 import "react-dom";
-import React, { useState } from "react";
-import Texto from "./components/Texto";
+import CardContainer from "./components/CardContainer";
 
 function App() {
   return (
     <>
-      <Texto/>
+      <CardContainer/>
     </>
   );
 }
