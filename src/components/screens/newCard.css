@@ -1,0 +1,85 @@
+@import url("../colors.css");
+
+.newCard-container {
+  width: 450px;
+  height: 700px;
+  padding: 15px;
+  background: var(--Background-Color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.newCard-name {
+  display: flex;
+  flex-direction: column;
+}
+.newCard-container label {
+  margin-left: 8px;
+  font-size: 1.2rem;
+  color: rgb(99, 99, 99);
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.newCard-container h2 {
+  color: var(--Primary-Color);
+  font-weight: 500;
+}
+
+.newCard-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+#newCard-input {
+  width: 250px;
+  height: 40px;
+  padding: 15px;
+  font-size: 20px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+
+.newCard-flag {
+  margin-top: 25px;
+}
+
+.newCard-flag .flags {
+margin-top: 15px;
+  display: flex;
+  align-items:center;
+  justify-content: space-around;
+  width: 365px;
+  height: 50px;
+  flex-wrap: wrap;
+}
+
+.newCard-flag .flags .logo {
+    margin-bottom: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left: 15px;
+}
+
+.flags span{
+    position: absolute;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    width: 110px;
+    height: 55px;
+}
+
+.newCard-flag .flags .logo:hover {
+  transform: scale(105%);
+}
+
+.visa {
+  filter: brightness(0);
+}
+
+.hipercard{
+    height: 90px;
+}
