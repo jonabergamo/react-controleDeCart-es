@@ -1,0 +1,10 @@
+
+
+.color{
+    --corButton: blue;
+    height: 50px;
+    width: 50px;
+    background-color: var(--corButton);
+    border-radius: 50%;
+    cursor: pointer;
+}
