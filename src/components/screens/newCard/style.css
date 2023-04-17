@@ -1,7 +1,7 @@
-@import url("../colors.css");
+@import url("../../colors.css");
 
 .newCard-container {
-  width: 450px;
+  width: 830px;
   height: 700px;
   padding: 15px;
   background: var(--Background-Color);
@@ -58,7 +58,7 @@ margin-top: 15px;
 }
 
 .newCard-flag .flags .logo {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   cursor: pointer;
   transition: 0.3s;
   margin-left: 15px;
@@ -80,9 +80,7 @@ margin-top: 15px;
   filter: brightness(0);
 }
 
-.hipercard{
-    height: 90px;
-}
+
 
 .newCard-color{
   margin-top: 120px;
@@ -91,6 +89,7 @@ margin-top: 15px;
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
+  width: 400px;
   gap: 20px;
 }
 
@@ -105,4 +104,21 @@ margin-top: 15px;
   height: 60px;
   width: 60px;
   border-radius: 50%;
+}
+
+.optionsContainer{
+  display: flex;
+}
+
+.cardVisualizer{
+  margin-left: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btnArea{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,12 +1,20 @@
 import "./App.css";
 import "react-dom";
-import CardContainer from "./components/CardContainer";
+import CardContainer from "./components/cardContainer";
 import NewCard from "./components/screens/newCard";
 
 function App() {
+  function handleNewCard(newCard) {
+    console.log(newCard);
+  }
   return (
     <>
-      <NewCard/>
+      <div className="cardScreen">
+        <NewCard onAddCard={handleNewCard} />
+      </div>
+      <div className="cardContainer">
+        <CardContainer />
+      </div>
     </>
   );
 }

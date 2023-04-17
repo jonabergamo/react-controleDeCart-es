@@ -1,0 +1,55 @@
+@import url("./../colors.css");
+
+:root {
+  --cor: rgb(170, 0, 147);
+}
+
+.container {
+  margin-top: 15px;
+  min-height: 130px;
+  min-width: 250px;
+  width: 250px;
+  height: 130px;
+  background-color: var(--cor);
+  border-radius: 15px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  transition: 0.3s;
+}
+
+.container .titleCard {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  display: flex;
+  height: 100px;
+  width: 200px;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+.container .titleCard h3 {
+    height: 30px;
+  color: white;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.container img {
+  font-weight: 500;
+  transform: scale(85%);
+}
+.icone_container {
+  width: 120px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -50px;
+  margin-left: 50%;
+}
+
+.chip {
+  height: 44px;
+}

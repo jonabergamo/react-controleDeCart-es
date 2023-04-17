@@ -1,0 +1,17 @@
+.textButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 140px;
+    background-color: var(--Primary-Color);
+    border-radius: 15px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.textButton h3{
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+}

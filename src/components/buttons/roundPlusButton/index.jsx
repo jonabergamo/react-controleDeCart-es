@@ -1,5 +1,4 @@
-import "./roundPlusButton.css";
-import plus from "../../files/plusPng.png"
+import "./style.css";
 
 function RoundPlusButton(props) {
   return (

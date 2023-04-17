@@ -1,13 +1,23 @@
 @import url(./components/colors.css);
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-body{
+body {
   background-color: var(--Background-color);
 }
 
+.cardScreen {
+  position: absolute;
+  top:12vh;
+  left: 26vw;
+}
+
+.cardContainer{
+  margin-top: 200px;
+  margin-left: 25px;
+}
