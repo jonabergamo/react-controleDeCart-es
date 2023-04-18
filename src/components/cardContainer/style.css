@@ -18,7 +18,13 @@
     border-radius: 15px;
     width: 280px;
     height: 550px;
+    padding: 15px;
     overflow-y: scroll;
+    
+}
+
+.caixa::-webkit-scrollbar{
+  display: none;
 }
 
 .all{
@@ -32,15 +38,18 @@
   justify-content: center;
   flex-direction: column;
   cursor: pointer;
-  transition: 0.3s;
 }
 
-.all:hover{
-  transform: scale(105%);
-}
 
 .all h1{
   font-size: 1.7em;
   color:white;
 }
 
+.newCard{
+  display: flex;
+  top: 15vh;
+  left: 30vw;
+  position: fixed;
+  z-index: 1000;
+}

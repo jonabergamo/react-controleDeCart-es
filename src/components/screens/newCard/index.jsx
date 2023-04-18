@@ -6,12 +6,12 @@ import american_express from "../../../files/american-express.png";
 import caju from "../../../files/caju.png";
 import hipercard from "../../../files/hipercard.png";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import ColorButton from "../../buttons/colorButton";
 import Cartao from "../../card";
 import TextButton from "../../buttons/textButton";
 
-function NewCard(props, {onAddCard}) {
+function NewCard(props) {
   const [x, setX] = useState("-115px");
   const [y, setY] = useState("-5px");
   const [height, setHeight] = useState("55px");
@@ -21,6 +21,7 @@ function NewCard(props, {onAddCard}) {
   const [selectorX, setSelectorX] = useState("-5px");
   const [selectorY, setSelectorY] = useState("15px");
   const [cardName, setCardName] = useState("");
+  const [cardData, setCardData] = useState({});
 
   function selectColor(e) {
     switch (e.target.id) {
@@ -143,22 +144,17 @@ function NewCard(props, {onAddCard}) {
     setCardName(e.target.value);
   }
 
-  function handleNewCard() {
-    const data = {
-      cardName,
-      chosenCard,
-      chosenColor,
-    };
-
-    onAddCard(data);
+  function teste() {
+    console.log("teste");
   }
 
   return (
     <>
       <motion.div
-        initial={{ opacity: 0, y: -200, x: -300 }}
+        exit={{ opacity: 0, scale: 0 }}
+        initial={{ opacity: 0, scale: 1 }}
         animate={{ opacity: 1, y: 0, x: 0 }}
-        transition={{ type: "spring", stiffness: 100 }}
+        transition={{ type: "spring", duration: 0.5 }}
         className="newCard-container"
       >
         <section className="newCard-title">
@@ -319,7 +315,9 @@ function NewCard(props, {onAddCard}) {
           <TextButton
             text="CONFIRMAR"
             className="submitBtn"
-            onClick={handleNewCard}
+            onClick={() => {
+              props.confirmSubmit(cardName, chosenCard, chosenColor);
+            }}
           />
         </div>
       </motion.div>

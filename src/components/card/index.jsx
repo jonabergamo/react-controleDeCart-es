@@ -43,6 +43,9 @@ function Cartao(props) {
         className="container"
         style={style}
         whileHover={props.whileHover || { scale: 1.05 }}
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{duration: 0.2}}
       >
         <motion.div className="titleCard">
           <h3>{props.nome}</h3>
