@@ -10,9 +10,12 @@ import logoHipercard from "../../files/hipercard.png";
 import { motion } from "framer-motion";
 import chip from "../../files/chip.png";
 
-function Cartao(props) {
+function Cartao(props, { item }) {
   const [state, setState] = useState(props.state);
-  const style = { "--cor": props.cor, cursor: props.cursor };
+  var style = {   "--cor": props.cor,
+  cursor: props.cursor,
+  ...props.style,
+}
   var icone;
   switch (props.bandeira) {
     case "visa":
@@ -37,15 +40,20 @@ function Cartao(props) {
       break;
   }
 
+
+
   return (
     <>
       <motion.div
+        id={props.id}
         className="container"
         style={style}
         whileHover={props.whileHover || { scale: 1.05 }}
+        exit={{ scale: 0 }}
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
-        transition={{duration: 0.2}}
+        transition={{ duration: 0.2, stiffness: 100 }}
+        whileTap={{ scale: 1.1 }}
       >
         <motion.div className="titleCard">
           <h3>{props.nome}</h3>

@@ -10,6 +10,7 @@ function ColorButton(props) {
         onClick={props.id}
         whileTap={{ scale: 0.9 }}
         whileHover={{ scale: 1.1 }}
+        transition={{ type: "spring", duration: 0.3, stiffness: 100 }}
         id={props.cor}
         className="color"
         style={style}

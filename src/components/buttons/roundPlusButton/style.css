@@ -10,11 +10,8 @@
     background-color: var(--Primary-Color);
     border-radius: 50%;
     cursor: pointer;
-    transition: 0.3s;
 }
-.roundButton:hover{
-    transform: scale(105%);
-}
+
 
 .roundButton h1{
     color: white;

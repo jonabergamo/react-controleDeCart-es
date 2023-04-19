@@ -16,6 +16,7 @@
   align-items: flex-start;
   flex-direction: column;
   transition: 0.3s;
+  user-select: none;
 }
 
 .container .titleCard {

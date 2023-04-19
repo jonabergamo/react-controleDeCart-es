@@ -12,6 +12,7 @@ import Cartao from "../../card";
 import TextButton from "../../buttons/textButton";
 
 function NewCard(props) {
+  const num = 12;
   const [x, setX] = useState("-115px");
   const [y, setY] = useState("-5px");
   const [height, setHeight] = useState("55px");
@@ -53,7 +54,7 @@ function NewCard(props) {
       case "#2EEC1E":
         setSelectorX("345px");
         setSelectorY("15px");
-        setChosenColor("#00D6C9");
+        setChosenColor("#2EEC1E");
         break;
       case "#FE1CBF":
         setSelectorX("-5px");
@@ -144,9 +145,6 @@ function NewCard(props) {
     setCardName(e.target.value);
   }
 
-  function teste() {
-    console.log("teste");
-  }
 
   return (
     <>
@@ -154,7 +152,7 @@ function NewCard(props) {
         exit={{ opacity: 0, scale: 0 }}
         initial={{ opacity: 0, scale: 1 }}
         animate={{ opacity: 1, y: 0, x: 0 }}
-        transition={{ type: "spring", duration: 0.5 }}
+        transition={{ type: "spring", duration: 0.5 , }}
         className="newCard-container"
       >
         <section className="newCard-title">
@@ -174,7 +172,7 @@ function NewCard(props) {
             </section>
             <section className="newCard-flag">
               <label>Bandeira</label>
-              <div className="flags">
+              <motion.div className="flags" initial={{x:-200, opacity:0}} animate={{x:0, opacity:1}}>
                 <motion.div
                   animate={{ x, y, opacity: 1, scale: 1, height, width }}
                   initial={{ opacity: 0, scale: 0.5 }}
@@ -226,7 +224,7 @@ function NewCard(props) {
                   onClick={alterar}
                   alt=""
                 />
-              </div>
+              </motion.div>
             </section>
             <section className="newCard-color"></section>
             <label>Cor do cartão</label>
@@ -316,7 +314,7 @@ function NewCard(props) {
             text="CONFIRMAR"
             className="submitBtn"
             onClick={() => {
-              props.confirmSubmit(cardName, chosenCard, chosenColor);
+              props.confirmSubmit(cardName, chosenCard, chosenColor, num);
             }}
           />
         </div>
