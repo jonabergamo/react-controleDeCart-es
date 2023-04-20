@@ -5,10 +5,17 @@ import NewCard from "../screens/newCard";
 import useState from "react-hook-use-state";
 import { AnimatePresence, motion, Reorder } from "framer-motion";
 import ClickAwayListener from "@mui/base/ClickAwayListener";
+import { BsFillTrash3Fill, BsFillPencilFill } from "react-icons/bs";
+import { Alert, AlertTitle } from "@mui/material";
+import { useEffect } from "react";
+import EditCard from "../screens/editCard";
 
 function CardContainer(props) {
   const [show, setShow] = useState(false);
-  const [data, setData] = useState([]);
+  var [data, setData] = useState([]);
+  const [deleteScreen, setDeleteScreen] = useState(false);
+  const [showEditScreen, setShowEditScreen] = useState(false);
+  const [editCardData, setEditCardData] = useState({});
 
   function submitCard(cardName, chosenCard, chosenColor, num) {
     const updateData = [
@@ -20,7 +27,7 @@ function CardContainer(props) {
         cardName: cardName,
         chosenCard: chosenCard,
         chosenColor: chosenColor,
-        id: data.length,
+        id: randonHex(10),
       },
     ];
     console.log(cardName, chosenCard, chosenColor);
@@ -29,25 +36,70 @@ function CardContainer(props) {
     setShow(false);
   }
 
-  function toggleShow() {
-    setShow(!show);
+  function deleteToggle(state) {
+    setDeleteScreen(state);
   }
 
-  const [deleteY, setDeleteX] = useState();
+  useEffect(() => {
+    console.log(editCardData);
+  }, [editCardData]);
 
-  function dragging(event, info) {
-    if (info.offset.x > 300) {
+  function randonHex(size) {
+    return [...Array(size)]
+      .map(() => Math.floor(Math.random() * 16).toString(16))
+      .join("");
+  }
+
+  function deleteCard(item) {
+    let newData = [];
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].id !== item.id) {
+        newData.push(data[i]);
+      }
     }
-    console.log(info.offset.x);
+    setData(newData);
+  }
+
+  const [editStart, setEditStart] = useState(false);
+
+  function startEdition() {
+    setEditStart(!editStart);
+    console.log("edit: " + !editStart);
+  }
+
+  function openEditScreen(item, index) {
+    if (editStart) {
+      setShowEditScreen(true);
+      setEditCardData({ ...data[index], index: index });
+    }
+  }
+
+  function editCardFinal(cardName, chosenCard, chosenColor, id, index) {
+    let newData = [...data];
+    newData[index] = {
+      cardName: cardName,
+      chosenCard: chosenCard,
+      chosenColor: chosenColor,
+      id: id,
+    };
+    setShowEditScreen(false);
+    setData(newData);
+    setEditStart(false);
   }
 
   return (
     <>
       <div className="newCard">
         <AnimatePresence>
-            {show ? <NewCard confirmSubmit={submitCard} /> : null}
-          </AnimatePresence>
-
+          {showEditScreen ? (
+            <EditCard cardData={editCardData} confirmSubmit={editCardFinal} />
+          ) : null}
+        </AnimatePresence>
+      </div>
+      <div className="newCard">
+        <AnimatePresence>
+          {show ? <NewCard confirmSubmit={submitCard} /> : null}
+        </AnimatePresence>
       </div>
       <div className="main-content">
         <div className="caixa">
@@ -55,24 +107,50 @@ function CardContainer(props) {
             {data.map((item, index) => (
               <motion.div key={index}>
                 <Cartao
-                  id={item.id}
+                  showDelete={deleteScreen}
+                  id={item}
                   style={{ cursor: "pointer" }}
                   nome={item.cardName}
                   bandeira={item.chosenCard}
                   cor={item.chosenColor}
+                  deleteClick={deleteCard}
+                  onClick={() => {
+                    console.log("clicou");
+                    openEditScreen(item, index);
+                  }}
                 />
               </motion.div>
             ))}
             <AllButton />
           </div>
         </div>
-        <RoundPlusButton
-          className="addButton"
-          simbol="+"
-          onClick={() => {
-            setShow(!show);
-          }}
-        />
+        <div className="bottomButtons">
+          <RoundPlusButton
+            className="addButton"
+            simbol="+"
+            onClick={() => {
+              setShow(!show);
+            }}
+          />
+          <RoundPlusButton
+            className="addButton"
+            src={<BsFillTrash3Fill className="icon" size={30} />}
+            onClick={() => {
+              deleteToggle(!deleteScreen);
+            }}
+            toggle={true}
+            active={deleteScreen}
+          />
+          <RoundPlusButton
+            className="addButton"
+            src={<BsFillPencilFill className="icon" size={30} />}
+            onClick={(e) => {
+              startEdition(e);
+            }}
+            toggle={true}
+            active={editStart}
+          />
+        </div>
       </div>
     </>
   );

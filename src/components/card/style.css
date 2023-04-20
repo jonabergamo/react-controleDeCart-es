@@ -5,11 +5,6 @@
 }
 
 .container {
-  margin-top: 15px;
-  min-height: 130px;
-  min-width: 250px;
-  width: 250px;
-  height: 130px;
   background-color: var(--cor);
   border-radius: 15px;
   display: flex;
@@ -17,6 +12,25 @@
   flex-direction: column;
   transition: 0.3s;
   user-select: none;
+  width: 250px;
+  height: 130px;
+}
+
+.totalCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  position: relative;
+  width: 250px;
+  height: 130px;
+}
+
+.deleteIcon {
+  position: absolute;
+  left: -25px;
+  top: -25px;
+  z-index: 1000;
 }
 
 .container .titleCard {
