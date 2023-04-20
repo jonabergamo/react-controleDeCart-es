@@ -9,6 +9,7 @@ import { BsFillTrash3Fill, BsFillPencilFill } from "react-icons/bs";
 import { Alert, AlertTitle } from "@mui/material";
 import { useEffect } from "react";
 import EditCard from "../screens/editCard";
+import NoCardAlert from "../noCardAlert";
 
 function CardContainer(props) {
   const [show, setShow] = useState(false);
@@ -16,6 +17,8 @@ function CardContainer(props) {
   const [deleteScreen, setDeleteScreen] = useState(false);
   const [showEditScreen, setShowEditScreen] = useState(false);
   const [editCardData, setEditCardData] = useState({});
+  const [showAllButton, setShowAllButton] = useState(false);
+  const [showNoCardAlert, setshowNoCardAlert] = useState(false);
 
   function submitCard(cardName, chosenCard, chosenColor, num) {
     const updateData = [
@@ -39,6 +42,16 @@ function CardContainer(props) {
   function deleteToggle(state) {
     setDeleteScreen(state);
   }
+
+  useEffect(() => {
+    if (data.length > 0) {
+      setShowAllButton(true);
+      setshowNoCardAlert(false);
+    } else {
+      setShowAllButton(false);
+      setshowNoCardAlert(true);
+    }
+  }, [data.length]);
 
   useEffect(() => {
     console.log(editCardData);
@@ -103,6 +116,11 @@ function CardContainer(props) {
       </div>
       <div className="main-content">
         <div className="caixa">
+        <div className="noCardAlert">
+        <AnimatePresence>
+          {showNoCardAlert ? <NoCardAlert/> : null}
+        </AnimatePresence>
+      </div>
           <div className="cartoes">
             {data.map((item, index) => (
               <motion.div key={index}>
@@ -121,7 +139,13 @@ function CardContainer(props) {
                 />
               </motion.div>
             ))}
-            <AllButton />
+            <AnimatePresence>
+              {showAllButton ? (
+                <div className="allContainer">
+                  <AllButton />
+                </div>
+              ) : null}
+            </AnimatePresence>
           </div>
         </div>
         <div className="bottomButtons">
@@ -162,7 +186,7 @@ function CardContainer(props) {
           className="all"
           whileHover={props.whileHover || { scale: 1.05 }}
           whileTap={{ scale: 1.1 }}
-          initial={{ scale: 1 }}
+          initial={{ scale: 1, opacity: 1 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.2 }}
         >

@@ -1,7 +1,7 @@
 @import url("../colors.css");
 
 .main-content {
-  width: 300px;
+  width: 250px;
   height: 600px;
   display: flex;
   flex-direction: column;
@@ -27,13 +27,18 @@
 .caixa::-webkit-scrollbar {
   display: none;
 }
+.allContainer {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .all {
-  margin-top: 15px;
-  min-height: 75px;
-  min-width: 250px;
+  height: 40px;
+  width: 200px;
   background-color: var(--Primary-Color);
-  border-radius: 15px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,3 +65,4 @@
   justify-content: center;
   align-items: center;
 }
+

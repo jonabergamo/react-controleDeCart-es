@@ -1,0 +1,18 @@
+.sadAlert{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.noCard-title{
+    color: rgba(0, 0, 0, 0.377);
+    font-weight: 400;
+    text-align: center;
+}
+
+.noCard-icon{
+    color: rgba(0, 0, 0, 0.377);
+    margin: 10px;
+}
