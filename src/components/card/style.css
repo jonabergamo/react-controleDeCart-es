@@ -11,18 +11,17 @@
   align-items: flex-start;
   flex-direction: column;
   user-select: none;
-  width: 200px;
-  height: 130px;
+  width: 20rem;
+  height: 13rem;
 }
 
 .totalCard {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 15px;
   position: relative;
-  width: 200px;
-  height: 130px;
+  width: 20rem;
+  height: 13rem;
 }
 
 .deleteIcon {
@@ -37,26 +36,26 @@
     align-items: flex-start;
     flex-direction: column;
   display: flex;
-  height: 100px;
-  width: 200px;
+  height: 10rem;
+  width: 20rem;
   margin-left: 20px;
   margin-top: 15px;
 }
 .container .titleCard h3 {
-    height: 30px;
+  height: 30px;
   color: white;
   font-family: "Roboto";
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 400;
 }
 
-.container img {
+.container .flag-icon {
   font-weight: 500;
-  transform: scale(85%);
+  width: 7rem;
 }
 .icone_container {
-  width: 120px;
-  height: 55px;
+  width: 12rem;
+  height: 5.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,5 +64,5 @@
 }
 
 .chip {
-  height: 44px;
+  width: 4rem;
 }

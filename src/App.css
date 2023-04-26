@@ -1,6 +1,13 @@
 @import url(./components/colors.css);
 
+
+html {
+  font-size: 30.5%;
+  scroll-behavior: smooth;
+}
+
 * {
+  
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -13,11 +20,11 @@ body {
 
 .cardScreen {
   position: absolute;
-  top:12vh;
+  top: 12vh;
   left: 26vw;
 }
 
-.cardContainer{
+.cardContainer {
   margin-top: 230px;
   margin-left: 100px;
 }

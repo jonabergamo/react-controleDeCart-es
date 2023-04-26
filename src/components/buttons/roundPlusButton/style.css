@@ -1,8 +1,8 @@
 
 
 .roundButton{
-    --scale: 50px;
-    margin: 15px;
+    --scale: 5rem;
+    margin: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,11 +18,11 @@
     color: white;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 300;
-    font-size: 4em;
+    font-size: 4rem;
     user-select: none;
 }
 
 .roundButton .icon{
     color: white;
-    
+    height: 2rem;
     }

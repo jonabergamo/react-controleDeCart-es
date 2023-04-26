@@ -19,6 +19,7 @@ function CardContainer(props) {
   const [editCardData, setEditCardData] = useState({});
   const [showAllButton, setShowAllButton] = useState(false);
   const [showNoCardAlert, setshowNoCardAlert] = useState(false);
+  const [cardStyle, setCardStyle] = useState({ cursor: "pointer" });
 
   function submitCard(cardName, chosenCard, chosenColor, num) {
     const updateData = [
@@ -40,6 +41,9 @@ function CardContainer(props) {
   }
 
   function deleteToggle(state) {
+        if (setEditStart) {
+      setEditStart(false);
+    }
     setDeleteScreen(state);
   }
 
@@ -76,6 +80,9 @@ function CardContainer(props) {
   const [editStart, setEditStart] = useState(false);
 
   function startEdition() {
+    if (deleteToggle) {
+      setDeleteScreen(false);
+    }
     setEditStart(!editStart);
     console.log("edit: " + !editStart);
   }
@@ -83,6 +90,7 @@ function CardContainer(props) {
   function openEditScreen(item, index) {
     if (editStart) {
       setShowEditScreen(true);
+      setEditStart(false);
       setEditCardData({ ...data[index], index: index });
     }
   }
@@ -127,7 +135,7 @@ function CardContainer(props) {
                 <Cartao
                   showDelete={deleteScreen}
                   id={item}
-                  style={{ cursor: "pointer" }}
+                  style={cardStyle}
                   nome={item.cardName}
                   bandeira={item.chosenCard}
                   cor={item.chosenColor}
@@ -136,6 +144,7 @@ function CardContainer(props) {
                     console.log("clicou");
                     openEditScreen(item, index);
                   }}
+                  animate={editStart ? {rotate:3} : null}
                 />
               </motion.div>
             ))}

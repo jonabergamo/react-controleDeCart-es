@@ -1,9 +1,9 @@
 @import url("../../colors.css");
 
 .newCard-container {
-  width: 830px;
-  height: 700px;
-  padding: 15px;
+  width: 83rem;
+  height: 70rem;
+  padding: 1.5rem;
   background: var(--Background-Color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
@@ -15,7 +15,7 @@
   flex-direction: column;
 }
 .newCard-container label {
-  margin-left: 8px;
+  margin-left: 0.8rem;
   font-size: 1.2rem;
   color: rgb(99, 99, 99);
   font-weight: 300;
@@ -30,46 +30,46 @@
 .newCard-title {
   display: flex;
   justify-content: center;
-  margin-bottom: 25px;
+  margin-bottom: 2.5rem;
 }
 
 #newCard-input {
-  width: 250px;
-  height: 40px;
+  width: 25rem;
+  height: 4rem;
   padding: 15px;
-  font-size: 20px;
+  font-size: 2rem;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.25);
   border-radius: 15px;
 }
 
 .newCard-flag {
-  margin-top: 25px;
+  margin-top: 2.5rem;
 }
 
 .newCard-flag .flags {
-margin-top: 15px;
+margin-top: 1.5rem;
   display: flex;
   align-items:center;
   justify-content: space-around;
-  width: 365px;
-  height: 50px;
+  width: 36.5rem;
+  height: 5rem;
   flex-wrap: wrap;
 }
 
 .newCard-flag .flags .logo {
-    margin-bottom: 40px;
+    margin-bottom: 4rem;
   cursor: pointer;
   transition: 0.3s;
-  margin-left: 15px;
+  margin-left: 1.5rem;
 }
 
 .flags .selector{
     position: absolute;
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 10px;
-    width: 110px;
-    height: 55px;
+    width: 11rem;
+    height: 5.5rem;
 }
 
 .newCard-flag .flags .logo:hover {
@@ -83,26 +83,26 @@ margin-top: 15px;
 
 
 .newCard-color{
-  margin-top: 120px;
+  margin-top: 12rem;
 }
 .newCard-colorsContent{
-  margin-top: 20px;
+  margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
-  width: 400px;
-  gap: 20px;
+  width: 40rem;
+  gap: 2rem;
 }
 
 .newCard-colorsContent .colorBtn{
-  margin-top: 20px;
+  margin-top: 2rem;
 
 }
 
 .newCard-actualSelect{
   position: absolute;
   border: 2px solid var(--Primary-Color);
-  height: 60px;
-  width: 60px;
+  height: 6rem;
+  width: 6rem;
   border-radius: 50%;
 }
 
@@ -111,7 +111,7 @@ margin-top: 15px;
 }
 
 .cardVisualizer{
-  margin-left: 80px;
+  margin-left: 8rem;
   display: flex;
   align-items: center;
   justify-content: center;

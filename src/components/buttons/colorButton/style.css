@@ -2,8 +2,8 @@
 
 .color{
     --corButton: blue;
-    height: 50px;
-    width: 50px;
+    height: 5rem;
+    width: 5rem;
     background-color: var(--corButton);
     border-radius: 50%;
     cursor: pointer;

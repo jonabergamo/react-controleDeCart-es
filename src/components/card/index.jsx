@@ -50,9 +50,11 @@ function Cartao(props, { item }) {
           style={style}
           whileHover={props.whileHover || { scale: 1.05 }}
           exit={{ scale: 0 }}
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ ease: "easeOut", duration: 0.2, stiffness: 100 }}
+          initial={({ scale: 0 , rotate: 0})}
+          animate={() => {
+            return {...props.animate,  scale: 1 };
+          }}
+          transition={{ type:"spring",ease: "easeOut", duration: 0.2, stiffness: 100 }}
           whileTap={{ scale: 1.1 }}
           onClick={props.onClick}
         >
@@ -78,11 +80,11 @@ function Cartao(props, { item }) {
           </AnimatePresence>
           <motion.div className="titleCard">
             <h3>{props.nome}</h3>
-            <img src={chip} alt="" className="chip"></img>
+            <img src={chip} alt="" className="chip" ></img>
           </motion.div>
 
           <motion.div className="icone_container">
-            <img src={icone} alt="" />
+            <img src={icone} alt="" className="flag-icon"/>
           </motion.div>
         </motion.div>
       </div>

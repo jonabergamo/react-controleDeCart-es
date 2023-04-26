@@ -1,5 +1,5 @@
 .sadAlert{
-    height: 200px;
+    height: 20rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,11 +8,12 @@
 
 .noCard-title{
     color: rgba(0, 0, 0, 0.377);
+    font-size: 1.6rem;
     font-weight: 400;
     text-align: center;
 }
 
 .noCard-icon{
     color: rgba(0, 0, 0, 0.377);
-    margin: 10px;
+    margin: 1.0rem;
 }
