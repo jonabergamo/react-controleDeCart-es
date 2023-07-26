@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Projeto de Estudo em React - Componente de Cartões de Crédito
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto foi um dos meus primeiros estudos em React, desenvolvido durante meu curso de Análise e Desenvolvimento de Sistemas. Consiste em um componente para adicionar cartões de crédito, permitindo a adição, edição e remoção de cartões. O projeto utiliza a biblioteca `framer-motion` para criar animações atraentes e fluidas.
 
-## Available Scripts
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/-3XL7kxLb2M?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-In the project directory, you can run:
+## Funcionalidades
 
-### `npm start`
+O projeto permite:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Adicionar novos cartões de crédito, escolhendo o nome, bandeira e cor do cartão
+- Editar cartões de crédito existentes
+- Remover cartões de crédito existentes
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Pré-requisitos
 
-### `npm test`
+- Node.js
+- npm
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Dependências
 
-### `npm run build`
+Veja a lista completa de dependências no arquivo `package.json`. As principais são:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React
+- @emotion/react
+- @emotion/styled
+- framer-motion
+- primereact
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Instalação
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Certifique-se de ter o Node.js e o npm instalados em sua máquina.
+2. Clone este repositório: `git clone https://github.com/jonabergamo/projeto-conclusao`
+3. Acesse o diretório do projeto: `cd projeto-conclusao`
+4. Instale as dependências: `npm install`
 
-### `npm run eject`
+## Uso
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Execute o projeto: `npm start`
+2. Abra o navegador e acesse: `http://localhost:3000`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contribuições
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Atualmente, não estamos aceitando contribuições para este projeto.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Contato
 
-## Learn More
+Se você tiver alguma dúvida ou sugestão sobre o projeto, sinta-se à vontade para entrar em contato comigo:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- E-mail: [jonathanbergamo16@gmail.com](https://mailto:jonathanbergamo16@gmail.com)
+- LinkedIn: [Jonathan Bergamo](https://www.linkedin.com/in/jonathanbergamo/)
+- Instagram: [jowbergamo](https://www.instagram.com/jowbergamo/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Sinta-se à vontade para me contatar por qualquer um desses canais. Ficarei feliz em ajudar ou receber feedback sobre o projeto.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img src="https://jonathanbergamo.netlify.app/static/media/signature.badcdf4beae3f9eb34135086f2354217.svg">
