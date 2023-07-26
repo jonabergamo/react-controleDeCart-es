@@ -2,8 +2,7 @@
 
 Este projeto foi um dos meus primeiros estudos em React, desenvolvido durante meu curso de Análise e Desenvolvimento de Sistemas. Consiste em um componente para adicionar cartões de crédito, permitindo a adição, edição e remoção de cartões. O projeto utiliza a biblioteca `framer-motion` para criar animações atraentes e fluidas.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/-3XL7kxLb2M?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+<img src="https://firebasestorage.googleapis.com/v0/b/react-auth-31116.appspot.com/o/w223.gif?alt=media&token=64aeb6c3-3d3e-4c10-9710-ebf71a0482a4"><img/>
 ## Funcionalidades
 
 O projeto permite:
